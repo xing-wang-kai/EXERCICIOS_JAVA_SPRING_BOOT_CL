@@ -1,3 +1,8 @@
+
+<img src="./src/main/img/imagem000.png"/>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
 # :white_flower: EXERCICIOS JAVA SPRING BOOT :dark_sunglasses:
 
 # FUNCIONABILIDADES.
@@ -39,3 +44,6 @@ CRUD
 :white_check_mark: UPDATE:
 
 <img src="./src/main/img/imagem006.png"/>
+
+CRIADO COM :heart: POR KAI WANG!
+<img src="./src/main/img/kai06.png" width="100px" heigth="100px"/>
