@@ -114,7 +114,7 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 			List<Cargo> cargos = (List<Cargo>) cr.findAll();
 			
-			cargos.stream().forEach(c-> System.out.println("| -----|    CARGO: " + c + "    |-----|"));
+			cargos.stream().forEach(c-> System.out.println("|-----|    CARGO: " + c + "|-----|"));
 			
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|------|   FIM   |---------------------------|");

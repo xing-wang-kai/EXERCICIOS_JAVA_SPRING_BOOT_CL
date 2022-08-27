@@ -102,14 +102,13 @@ public class Funcionario
 	@Override
 	public String toString()
 	{	
-		return String.format(
-				"[ ID: %d NOME: %s CPF: %s, CARGO: %s, SALARIO: %d, UNIDADE-TRABALHO: %s ]", 
-				this.getId(), 
-				this.getNome(), 
-				this.getCpf(), 
-				this.getCargo(), 
-				this.getSalario(),
-				this.getUnidadeTrabalho());
+		return "[ ID: " 
+				+this.getId() 
+				+"NOME: "+ this.getNome() 
+				+" CPF: "+ this.getCpf() 
+				+" CARGO: "+ this.getCargo() 
+				+" SALARIO: "+ this.getSalario()  
+				+" UNIDADE-TRABALHO: ]";
 	}
 	
 }

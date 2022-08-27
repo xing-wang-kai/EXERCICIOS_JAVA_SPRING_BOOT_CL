@@ -90,55 +90,70 @@ public class FuncionarioService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O CARGO_ID    |-------------|");
 		System.out.println("|--------------------------------------------|");
+		
+		try
+		{
 			Integer cargoId = scanner.nextInt();
 			Optional<Cargo> cargo = cr.findById(cargoId);
 			
 		
-		String concorda = "s";
-		ArrayList<UnidadeTrabalho> listUt = new ArrayList<>();
-		while(concorda.equals("s")) 
+			String concorda = "s";
+			ArrayList<UnidadeTrabalho> listUt = new ArrayList<>();
+			while(concorda.equals("s")) 
+			{
+				System.out.println("|--------------------------------------------|");
+				System.out.println("|----|    INSIRA O UNIDADE_ID    |-----------|");
+				System.out.println("|--------------------------------------------|");
+				
+				Integer unidadeId = scanner.nextInt();
+				Optional<UnidadeTrabalho> ut = utr.findById(unidadeId);
+				ut.stream().forEach(u->listUt.add(u));
+				
+				System.out.println("|--------------------------------------------|");
+				System.out.println("|-|  INSERIR MAIS UNIDADES? [ s / n ] |------|");
+				System.out.println("|--------------------------------------------|");
+				
+				concorda = scanner.next();
+			}
+			
+				System.out.println("|--------------------------------------------|");
+				System.out.println("|--|    INSIRA DATA CONTRATACAO    |---------|");
+				System.out.println("|--------------------------------------------|");
+			
+				String data = scanner.next();
+				LocalDate dataContratacao = LocalDate.parse(data, formatter);
+				
+				try 
+				{
+					Funcionario funcionario = new Funcionario();
+					
+					funcionario.setNome(nome);
+					funcionario.setCpf(cpf);
+					funcionario.setSalario(salario);
+					cargo.stream().forEach(c -> funcionario.setCargo(c));
+					funcionario.setDataContratacao(dataContratacao);
+					funcionario.setUnidadeTrabalho((List<UnidadeTrabalho>) listUt);
+					fr.save(funcionario);
+				}
+				catch(Exception e)
+				{
+					System.out.println("|--------------------------------------------|");
+					System.out.println("|-------|           ERROR          |---------|");
+					System.out.println("|-------| " + e.getMessage());
+					System.out.println("|--------------------------------------------|");
+				}
+		}
+		catch(Exception err)
 		{
-			System.out.println("|--------------------------------------------|");
-			System.out.println("|----|    INSIRA O UNIDADE_ID    |-----------|");
-			System.out.println("|--------------------------------------------|");
-			
-			Integer unidadeId = scanner.nextInt();
-			Optional<UnidadeTrabalho> ut = utr.findById(unidadeId);
-			ut.stream().forEach(u->listUt.add(u));
-			
-			System.out.println("|--------------------------------------------|");
-			System.out.println("|-|  INSERIR MAIS UNIDADES? [ s / n ] |------|");
-			System.out.println("|--------------------------------------------|");
-			
-			concorda = scanner.next();
+			System.out.println(String.format("|---| ERRO MESSAGE: %10.0s |---|", err.getMessage()));
+			System.out.println("|---| ERRO STACK TRACE: " + err.getStackTrace() + " |---|");
+			System.out.println("|---| ERRO SUPPRESSED: " + err.getSuppressed() + " |---|");
+			System.out.println(String.format("|---| ERRO CAUSE: %10.0s |---|", err.getCause()));
+			System.out.println(String.format("|---| ERRO CLASS: %10.0s |---|", err.getClass()));
+			System.out.println(String.format("|---| ERRO LOCALIZES MESSAGE: %10.0s |---|", err.getLocalizedMessage()));
 		}
 		
-		System.out.println("|--------------------------------------------|");
-		System.out.println("|--|    INSIRA DATA CONTRATACAO    |---------|");
-		System.out.println("|--------------------------------------------|");
-		
-			String data = scanner.next();
-			LocalDate dataContratacao = LocalDate.parse(data, formatter);
 			
-			try 
-			{
-				Funcionario funcionario = new Funcionario();
-				
-				funcionario.setNome(nome);
-				funcionario.setCpf(cpf);
-				funcionario.setSalario(salario);
-				cargo.stream().forEach(c -> funcionario.setCargo(c));
-				funcionario.setDataContratacao(dataContratacao);
-				funcionario.setUnidadeTrabalho((List<UnidadeTrabalho>) listUt);
-				fr.save(funcionario);
-			}
-			catch(Exception e)
-			{
-				System.out.println("|--------------------------------------------|");
-				System.out.println("|-------|           ERROR          |---------|");
-				System.out.println("|-------| " + e.getMessage());
-				System.out.println("|--------------------------------------------|");
-			}
 			
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|--|     FUNCIONARIO SALVO COM SUCESSO    |--|");
@@ -167,6 +182,10 @@ public class FuncionarioService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O CARGO_ID    |-------------|");
 		System.out.println("|--------------------------------------------|");
+		
+		
+		try
+		{
 			Integer cargoId = scanner.nextInt();
 			Optional<Cargo> cargo = cr.findById(cargoId);
 			
@@ -217,7 +236,16 @@ public class FuncionarioService
 				System.out.println("|-------| " + e.getMessage());
 				System.out.println("|--------------------------------------------|");
 			}
-			
+		}
+		catch(Exception err)
+		{
+			System.out.println(String.format("|---| ERRO MESSAGE: %10.0s |---|", err.getMessage()));
+			System.out.println("|---| ERRO STACK TRACE: " + err.getStackTrace() + " |---|");
+			System.out.println("|---| ERRO SUPPRESSED: " + err.getSuppressed() + " |---|");
+			System.out.println(String.format("|---| ERRO CAUSE: %10.0s |---|", err.getCause()));
+			System.out.println(String.format("|---| ERRO CLASS: %10.0s |---|", err.getClass()));
+			System.out.println(String.format("|---| ERRO LOCALIZES MESSAGE: %10.0s |---|", err.getLocalizedMessage()));
+		}
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|--|     FUNCIONARIO ALTERADO COM SUCESSO    |--|");
 		System.out.println("|--------------------------------------------|");
@@ -228,8 +256,21 @@ public class FuncionarioService
 		System.out.println("|-----|  INSIRA O ID PARA REMOVER  |---------|");
 		System.out.println("|--------------------------------------------|");
 		
+		try
+		{
+
 			Integer id = scanner.nextInt();
 			fr.deleteById(id);
+		}
+		catch(Exception err)
+		{
+			System.out.println(String.format("|---| ERRO MESSAGE: %10.0s |---|", err.getMessage()));
+			System.out.println("|---| ERRO STACK TRACE: " + err.getStackTrace() + " |---|");
+			System.out.println("|---| ERRO SUPPRESSED: " + err.getSuppressed() + " |---|");
+			System.out.println(String.format("|---| ERRO CAUSE: %10.0s |---|", err.getCause()));
+			System.out.println(String.format("|---| ERRO CLASS: %10.0s |---|", err.getClass()));
+			System.out.println(String.format("|---| ERRO LOCALIZES MESSAGE: %10.0s |---|", err.getLocalizedMessage()));
+		}
 		
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|---| FUNCIONARIO REMOVIDO        |----------|");
@@ -241,9 +282,23 @@ public class FuncionarioService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|------------|   FUNCIONARIOS  |-------------|");
 		System.out.println("|--------------------------------------------|");
-			List<Funcionario> funcionarios = (List<Funcionario>) fr.findAll();
-			
-			funcionarios.stream().forEach(f-> System.out.println("| -----|    UT: " + f + "    |-----|"));
+			try
+			{
+				List<Funcionario> funcionarios = (List<Funcionario>) fr.findAll();
+				
+				funcionarios.stream().forEach(f-> System.out.println("| -----|    UT: " + f + "    |-----|"));
+				
+			}
+			catch(Exception err)
+			{
+				System.out.println("|---| ERRO STACK TRACE:  " + err.getStackTrace() + " |---|");
+				System.out.println("|---| ERRO SUPPRESSED:   " + err.getSuppressed() + " |---|");
+				System.out.println("|---| ERRO MESSAGE:      " + err.getMessage() + " |---|");
+				System.out.println("|---| ERRO CAUSA:        " + err.getCause() + " |---|");
+				System.out.println("|---| ERRO CLASS:        " + err.getClass() + " |---|");
+				System.out.println("|---| ERRO LOCALIZED MESSAGE: " + err.getLocalizedMessage() + " |---|");
+				
+			}
 			
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|------|   FIM   |---------------------------|");
