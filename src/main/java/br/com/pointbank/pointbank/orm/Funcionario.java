@@ -36,7 +36,7 @@ public class Funcionario
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "funcionarios_unidades", 
 		joinColumns = {@JoinColumn(name = "fk_funcionario") }, 
-		inverseJoinColumns = { @JoinColumn(name = "fk_unidade") })
+	inverseJoinColumns = { @JoinColumn(name = "fk_unidade") })
 	private List<UnidadeTrabalho> unidadeTrabalhos;
 	
 	public Funcionario () {}

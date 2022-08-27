@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import br.com.pointbank.pointbank.service.CargoService;
+import br.com.pointbank.pointbank.service.FuncionarioRelatorioService;
 import br.com.pointbank.pointbank.service.FuncionarioService;
 import br.com.pointbank.pointbank.service.UnidadeTrabalhoService;
 
@@ -16,17 +17,20 @@ public class PointbankApplication implements CommandLineRunner{
 	private Boolean system = true;
 	private final CargoService cs;
 	private final FuncionarioService fs;
+	private final FuncionarioRelatorioService frs;
 	private final UnidadeTrabalhoService uts;
 	
 	public PointbankApplication(
 			CargoService cs,
 			FuncionarioService fs,
-			UnidadeTrabalhoService uts
+			UnidadeTrabalhoService uts,
+			FuncionarioRelatorioService frs
 			)
 	{
 		this.cs = cs;
 		this.fs = fs;
 		this.uts = uts;
+		this.frs = frs;
 	}
 
 	public static void main(String[] args) {
@@ -43,6 +47,8 @@ public class PointbankApplication implements CommandLineRunner{
 			System.out.println("|--------| [ 1 ] - CARGOS           |--------|");
 			System.out.println("|--------| [ 2 ] - FUNCIONARIOS     |--------|");
 			System.out.println("|--------| [ 3 ] - UNIDADE TRABALHO |--------|");
+			System.out.println("|--------| [ 4 ] - RELATORIOS DE    |--------|");
+			System.out.println("|--------|         FUNCIONARIOS     |--------|");
 			System.out.println("|--------------------------------------------|");
 			
 			Integer opcao = scanner.nextInt();
@@ -58,6 +64,10 @@ public class PointbankApplication implements CommandLineRunner{
 			else if(opcao == 3)
 			{
 				this.uts.inicial(scanner);
+			}
+			else if(opcao == 4)
+			{
+				this.frs.inicial(scanner);
 			}
 			else
 			{
