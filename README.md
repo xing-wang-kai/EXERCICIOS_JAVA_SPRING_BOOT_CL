@@ -148,6 +148,45 @@ conforme o exemplo logo abaixo.
 
 <img src="./src/main/img/imagem023.png" align="center"/>
 
+###USANDO NATIVEQUERY
+
+Além das Query do JPQL também foi utlizando os metodos com Query Nativas do SQL para buscar os valores desejados como no exemplo.
+nesses caso na anotação QUERY foi usado propriedade VALUE e NATIVEQUERY como TRUE;
+
+<img src="./src/main/img/imagem024.png" align="center"/>
+
+###USANDO PAGING AND SORTING
+
+É possivel realizar uma pesquisa páginada por número de Entidades, para isso modificamos primeiro a interface CrudRepository por PagingAndSortingRepository,
+Esta interface permite criar modelos de paginação.
+
+<img src="./src/main/img/imagem028.png" align="center"/>
+
+Após modificar o REPOSITORY então em service adicionado o PAGEABLE e informado o PageRequest onde informamos a página da consulta, a quantidade de consulta retornadas e a ordenação da consulta.
+
+<img src="./src/main/img/imagem029.png" align="center"/>
+
+Como retorno temos.
+
+<img src="./src/main/img/imagem030.png" align="center"/>
+
+
+###USANDO PROJECTION
+
+Projectos são facilidades disponibilizada no SPRING que permite determinar quais atributos devem retornar de uma entidade, 
+para criar uma projection é simples.
+1. Criar pasta projection - dentro de projection criar uma interface com as informações de retorno. OBS: os retornos devem ser o mesmo da Entidade.
+
+<img src="./src/main/img/imagem025.png" align="center"/>
+
+2. Criar em REPOSITORY informações para o retorno com Native Query que deve retornar as colunas desejadas da pesquisa.
+
+<img src="./src/main/img/imagem027.png" align="center"/>
+
+3. Criar SERVICE e  o metodo que retorna a PROJECTION criada com os valores get informados.
+
+<img src="./src/main/img/imagem026.png" align="center"/>
+
 
 ---
 
