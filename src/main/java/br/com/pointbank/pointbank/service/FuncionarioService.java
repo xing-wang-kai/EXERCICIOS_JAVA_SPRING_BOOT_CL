@@ -145,12 +145,12 @@ public class FuncionarioService
 		}
 		catch(Exception err)
 		{
-			System.out.println(String.format("|---| ERRO MESSAGE: %10.0s |---|", err.getMessage()));
-			System.out.println("|---| ERRO STACK TRACE: " + err.getStackTrace() + " |---|");
-			System.out.println("|---| ERRO SUPPRESSED: " + err.getSuppressed() + " |---|");
-			System.out.println(String.format("|---| ERRO CAUSE: %10.0s |---|", err.getCause()));
-			System.out.println(String.format("|---| ERRO CLASS: %10.0s |---|", err.getClass()));
-			System.out.println(String.format("|---| ERRO LOCALIZES MESSAGE: %10.0s |---|", err.getLocalizedMessage()));
+			System.out.println("|---| ERRO STACK TRACE:  " + err.getStackTrace() + " |---|");
+			System.out.println("|---| ERRO SUPPRESSED:   " + err.getSuppressed() + " |---|");
+			System.out.println("|---| ERRO MESSAGE:      " + err.getMessage() + " |---|");
+			System.out.println("|---| ERRO CAUSA:        " + err.getCause() + " |---|");
+			System.out.println("|---| ERRO CLASS:        " + err.getClass() + " |---|");
+			System.out.println("|---| ERRO LOCALIZED MESSAGE: " + err.getLocalizedMessage() + " |---|");
 		}
 		
 			
@@ -239,12 +239,12 @@ public class FuncionarioService
 		}
 		catch(Exception err)
 		{
-			System.out.println(String.format("|---| ERRO MESSAGE: %10.0s |---|", err.getMessage()));
-			System.out.println("|---| ERRO STACK TRACE: " + err.getStackTrace() + " |---|");
-			System.out.println("|---| ERRO SUPPRESSED: " + err.getSuppressed() + " |---|");
-			System.out.println(String.format("|---| ERRO CAUSE: %10.0s |---|", err.getCause()));
-			System.out.println(String.format("|---| ERRO CLASS: %10.0s |---|", err.getClass()));
-			System.out.println(String.format("|---| ERRO LOCALIZES MESSAGE: %10.0s |---|", err.getLocalizedMessage()));
+			System.out.println("|---| ERRO STACK TRACE:  " + err.getStackTrace() + " |---|");
+			System.out.println("|---| ERRO SUPPRESSED:   " + err.getSuppressed() + " |---|");
+			System.out.println("|---| ERRO MESSAGE:      " + err.getMessage() + " |---|");
+			System.out.println("|---| ERRO CAUSA:        " + err.getCause() + " |---|");
+			System.out.println("|---| ERRO CLASS:        " + err.getClass() + " |---|");
+			System.out.println("|---| ERRO LOCALIZED MESSAGE: " + err.getLocalizedMessage() + " |---|");
 		}
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|--|     FUNCIONARIO ALTERADO COM SUCESSO    |--|");
@@ -264,12 +264,12 @@ public class FuncionarioService
 		}
 		catch(Exception err)
 		{
-			System.out.println(String.format("|---| ERRO MESSAGE: %10.0s |---|", err.getMessage()));
-			System.out.println("|---| ERRO STACK TRACE: " + err.getStackTrace() + " |---|");
-			System.out.println("|---| ERRO SUPPRESSED: " + err.getSuppressed() + " |---|");
-			System.out.println(String.format("|---| ERRO CAUSE: %10.0s |---|", err.getCause()));
-			System.out.println(String.format("|---| ERRO CLASS: %10.0s |---|", err.getClass()));
-			System.out.println(String.format("|---| ERRO LOCALIZES MESSAGE: %10.0s |---|", err.getLocalizedMessage()));
+			System.out.println("|---| ERRO STACK TRACE:  " + err.getStackTrace() + " |---|");
+			System.out.println("|---| ERRO SUPPRESSED:   " + err.getSuppressed() + " |---|");
+			System.out.println("|---| ERRO MESSAGE:      " + err.getMessage() + " |---|");
+			System.out.println("|---| ERRO CAUSA:        " + err.getCause() + " |---|");
+			System.out.println("|---| ERRO CLASS:        " + err.getClass() + " |---|");
+			System.out.println("|---| ERRO LOCALIZED MESSAGE: " + err.getLocalizedMessage() + " |---|");
 		}
 		
 		System.out.println("|--------------------------------------------|");

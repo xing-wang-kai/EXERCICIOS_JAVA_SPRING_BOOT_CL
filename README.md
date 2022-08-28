@@ -120,6 +120,18 @@ O sitema utlizado é uma interação com o terminal sem usar interfaces ou html 
 <br/>
 </fieldset>
 
+##SPRING 'DERIVED QUERY'
+
+
+É possivel personalizar algumas busca como no exemplo abaixo,
+Neste exemplo foi usado o metodo findByNome que recebe uma String e retorna os dados pelo nome do funcionário.
+o metodo deve ser adicionado no REPOSITORY.
+<img src="./src/main/img/imagem020.png" align="center"/>
+</br>
+<img src="./src/main/img/imagem021.png" align="center"/>
+</br>
+<img src="./src/main/img/imagem022.png" align="center"/>
+</br>
 ---
 
 CRIADO COM :heart: POR KAI WANG!
