@@ -30,6 +30,7 @@ public class CargoService
 			System.out.println("|--------| [ 3 ] - REMOVER          |--------|");
 			System.out.println("|--------| [ 4 ] - BUSCAR           |--------|");
 			System.out.println("|--------------------------------------------|");
+			System.out.println("");
 			
 			Integer opcao = get.nextInt();
 			
@@ -59,6 +60,8 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|-----|  INSIRA A DESCRICAO  |---------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
+		
 			String descricao = get.next();
 			Cargo cargo = new Cargo();
 			cargo.setDescricao(descricao);
@@ -66,6 +69,7 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|------| CARGO SALVO COM SUCESSO |-----------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 	}
 	
 	public void alterar(Scanner scanner)
@@ -73,12 +77,14 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|-----|  INSIRA O ID PARA ALTERAR  |---------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 		
 			Integer id = scanner.nextInt();
 		
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|-----|  INSIRA A NOVA DESCRICAO  |----------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 		
 			String descricao = scanner.next();
 			
@@ -90,6 +96,8 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|---| CARGO ALTERADO COM SUCESSO |-----------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 		
 	}
 	
@@ -98,6 +106,7 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|-----|  INSIRA O ID PARA REMOVER  |---------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 		
 			Integer id = scanner.nextInt();
 			cr.deleteById(id);
@@ -105,6 +114,8 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|---| CARGO ALTERADO COM REMOVIDO |----------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 	}
 	
 	public void buscar()
@@ -112,6 +123,7 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|--------|   CARGOS   |----------------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 			List<Cargo> cargos = (List<Cargo>) cr.findAll();
 			
 			cargos.stream().forEach(c-> System.out.println("|-----|    CARGO: " + c + "|-----|"));
@@ -119,5 +131,7 @@ public class CargoService
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|------|   FIM   |---------------------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 	}
 }

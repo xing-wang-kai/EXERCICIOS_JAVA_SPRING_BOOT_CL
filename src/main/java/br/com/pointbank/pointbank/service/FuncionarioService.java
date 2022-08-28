@@ -45,6 +45,7 @@ public class FuncionarioService {
 			System.out.println("|--------| [ 3 ] - REMOVER          |--------|");
 			System.out.println("|--------| [ 4 ] - BUSCAR           |--------|");
 			System.out.println("|--------------------------------------------|");
+			System.out.println("");
 
 			Integer opcao = scanner.nextInt();
 
@@ -74,18 +75,25 @@ public class FuncionarioService {
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|   INSIRA O NOME   |-------------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
+		
 		String nome = scanner.next();
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O CPF    |------------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
+		
 		String cpf = scanner.next();
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O SALARIO    |--------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
+		
 		Double salario = scanner.nextDouble();
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O CARGO_ID    |-------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 
 		try {
 			Integer cargoId = scanner.nextInt();
@@ -97,6 +105,7 @@ public class FuncionarioService {
 				System.out.println("|--------------------------------------------|");
 				System.out.println("|----|    INSIRA O UNIDADE_ID    |-----------|");
 				System.out.println("|--------------------------------------------|");
+				System.out.println("");
 
 				Integer unidadeId = scanner.nextInt();
 				Optional<UnidadeTrabalho> ut = utr.findById(unidadeId);
@@ -105,6 +114,7 @@ public class FuncionarioService {
 				System.out.println("|--------------------------------------------|");
 				System.out.println("|-|  INSERIR MAIS UNIDADES? [ s / n ] |------|");
 				System.out.println("|--------------------------------------------|");
+				System.out.println("");
 
 				concorda = scanner.next();
 			}
@@ -112,6 +122,7 @@ public class FuncionarioService {
 			System.out.println("|--------------------------------------------|");
 			System.out.println("|--|    INSIRA DATA CONTRATACAO    |---------|");
 			System.out.println("|--------------------------------------------|");
+			System.out.println("");
 
 			String data = scanner.next();
 			LocalDate dataContratacao = LocalDate.parse(data, formatter);
@@ -126,11 +137,20 @@ public class FuncionarioService {
 				funcionario.setDataContratacao(dataContratacao);
 				funcionario.setUnidadeTrabalho((List<UnidadeTrabalho>) listUt);
 				fr.save(funcionario);
+				
+				
+				System.out.println("|--------------------------------------------|");
+				System.out.println("|--------------|      FIM    |---------------|");
+				System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+				System.out.println("");
+				
+				
 			} catch (Exception e) {
 				System.out.println("|--------------------------------------------|");
 				System.out.println("|-------|           ERROR          |---------|");
 				System.out.println("|-------| " + e.getMessage());
 				System.out.println("|--------------------------------------------|");
+				System.out.println("");
 			}
 		} catch (Exception err) {
 			System.out.println("|---| ERRO STACK TRACE:  " + err.getStackTrace() + " |---|");
@@ -139,35 +159,47 @@ public class FuncionarioService {
 			System.out.println("|---| ERRO CAUSA:        " + err.getCause() + " |---|");
 			System.out.println("|---| ERRO CLASS:        " + err.getClass() + " |---|");
 			System.out.println("|---| ERRO LOCALIZED MESSAGE: " + err.getLocalizedMessage() + " |---|");
+			System.out.println("");
 		}
 
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|--|     FUNCIONARIO SALVO COM SUCESSO    |--|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
+		
+		System.out.println("|--------------------------------------------|");
+		System.out.println("|--------------|      FIM    |---------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 	}
 
 	public void alterar(Scanner scanner) {
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|-----|  INSIRA O ID PARA ALTERAR  |---------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 
 		Integer id = scanner.nextInt();
 
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|   INSIRA O NOME   |-------------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 		String nome = scanner.next();
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O CPF    |------------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 		String cpf = scanner.next();
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O SALARIO    |--------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 		Double salario = scanner.nextDouble();
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|----|    INSIRA O CARGO_ID    |-------------|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
 
 		try {
 			Integer cargoId = scanner.nextInt();
@@ -179,6 +211,7 @@ public class FuncionarioService {
 				System.out.println("|--------------------------------------------|");
 				System.out.println("|----|    INSIRA O UNIDADE_ID    |-----------|");
 				System.out.println("|--------------------------------------------|");
+				System.out.println("");
 
 				Integer unidadeId = scanner.nextInt();
 				Optional<UnidadeTrabalho> ut = utr.findById(unidadeId);
@@ -187,6 +220,7 @@ public class FuncionarioService {
 				System.out.println("|--------------------------------------------|");
 				System.out.println("|-|  INSERIR MAIS UNIDADES? [ s / n ] |------|");
 				System.out.println("|--------------------------------------------|");
+				System.out.println("");
 
 				concorda = scanner.next();
 			}
@@ -194,6 +228,7 @@ public class FuncionarioService {
 			System.out.println("|--------------------------------------------|");
 			System.out.println("|--|    INSIRA DATA CONTRATACAO    |---------|");
 			System.out.println("|--------------------------------------------|");
+			System.out.println("");
 
 			String data = scanner.next();
 			LocalDate dataContratacao = LocalDate.parse(data, formatter);
@@ -214,6 +249,7 @@ public class FuncionarioService {
 				System.out.println("|-------|           ERROR          |---------|");
 				System.out.println("|-------| " + e.getMessage());
 				System.out.println("|--------------------------------------------|");
+				System.out.println("");
 			}
 		} catch (Exception err) {
 			System.out.println("|---| ERRO STACK TRACE:  " + err.getStackTrace() + " |---|");
@@ -222,10 +258,17 @@ public class FuncionarioService {
 			System.out.println("|---| ERRO CAUSA:        " + err.getCause() + " |---|");
 			System.out.println("|---| ERRO CLASS:        " + err.getClass() + " |---|");
 			System.out.println("|---| ERRO LOCALIZED MESSAGE: " + err.getLocalizedMessage() + " |---|");
+			System.out.println("");
 		}
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|--|     FUNCIONARIO ALTERADO COM SUCESSO    |--|");
 		System.out.println("|--------------------------------------------|");
+		System.out.println("");
+		
+		System.out.println("|--------------------------------------------|");
+		System.out.println("|--------------|      FIM    |---------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 	}
 
 	public void remover(Scanner scanner) {
@@ -249,6 +292,11 @@ public class FuncionarioService {
 		System.out.println("|--------------------------------------------|");
 		System.out.println("|---| FUNCIONARIO REMOVIDO        |----------|");
 		System.out.println("|--------------------------------------------|");
+		
+		System.out.println("|--------------------------------------------|");
+		System.out.println("|--------------|      FIM    |---------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 	}
 
 	public void buscar(Scanner scanner) {
@@ -286,8 +334,9 @@ public class FuncionarioService {
 		}
 
 		System.out.println("|--------------------------------------------|");
-		System.out.println("|------|   FIM   |---------------------------|");
-		System.out.println("|--------------------------------------------|");
+		System.out.println("|--------------|      FIM    |---------------|");
+		System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+		System.out.println("");
 
 	}
 }

@@ -187,7 +187,29 @@ para criar uma projection é simples.
 
 <img src="./src/main/img/imagem026.png" align="center"/>
 
+### USANDO SPECIFICATION
 
+Quando queremos executar querys especificas para determinados retornos de entidades como o LIKE ou GREATERTHAN etc. podemos usar o SPECIFICATION do SPRING.
+
+1. Importamos o JpaSpecificationExecutor<clss> e incluimos como extensão interface em nosso REPOSITORY.
+
+<img src="./src/main/img/imagem031.png" align="center"/>
+
+2.Criamos um novo arquivo na pasta SPECIFICATION e então criamos o metodo do SPECIFICATION e seu retorno.
+
+<img src="./src/main/img/imagem032.png" align="center"/>
+
+3.Depois adicionado o metodo em findAll na pesquisa conforme o print.
+
+<img src="./src/main/img/imagem033.png" align="center"/>
+
+####OUTROS METODOS SPECIFICATION
+
+GreateThan like Equal
+
+<img src="./src/main/img/imagem034.png" align="center"/>
+
+<img src="./src/main/img/imagem035.png" align="center"/>
 ---
 
 CRIADO COM :heart: POR KAI WANG!

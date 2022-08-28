@@ -50,6 +50,7 @@ public class PointbankApplication implements CommandLineRunner{
 			System.out.println("|--------| [ 4 ] - RELATORIOS DE    |--------|");
 			System.out.println("|--------|         FUNCIONARIOS     |--------|");
 			System.out.println("|--------------------------------------------|");
+			System.out.println("");
 			
 			Integer opcao = scanner.nextInt();
 			
@@ -73,6 +74,11 @@ public class PointbankApplication implements CommandLineRunner{
 			{
 				system = false;
 			}
+			
+			System.out.println("|--------------------------------------------|");
+			System.out.println("|--------------|      FIM    |---------------|");
+			System.out.println("|-------------FEITO COM ♥ POR KAI WANG-------|");
+			System.out.println("");
 			
 		}
 	}
