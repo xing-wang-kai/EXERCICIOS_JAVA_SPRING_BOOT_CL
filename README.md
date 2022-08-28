@@ -120,18 +120,35 @@ O sitema utlizado é uma interação com o terminal sem usar interfaces ou html 
 <br/>
 </fieldset>
 
-##SPRING 'DERIVED QUERY'
+##SPRING DERIVED QUERY
 
 
 É possivel personalizar algumas busca como no exemplo abaixo,
 Neste exemplo foi usado o metodo findByNome que recebe uma String e retorna os dados pelo nome do funcionário.
 o metodo deve ser adicionado no REPOSITORY.
+
 <img src="./src/main/img/imagem020.png" align="center"/>
-</br>
+
+Foi informado ao REPOSITORY que haverá uma nova busca com retorno de lista de funcionários, nesta busca será iserido uma STRING com o nome do funcionário.
+O Spring identifica que a entidade funcionario tem um atributo chamado nome e que é do tipo String e etão automáticamente cria a Query para o banco de dados.
+
 <img src="./src/main/img/imagem021.png" align="center"/>
-</br>
+
+O metodo foi criado em relatório funcionário para retornar os dados escolhidos.
+
+
 <img src="./src/main/img/imagem022.png" align="center"/>
-</br>
+
+Após o processo o sistema retorna os funcionários associados aos nomes informados.
+
+###USANDO JPQL
+
+É possivel usar o JPQL para auxiliar na criação de novos metodos para buscar usuários.
+conforme o exemplo logo abaixo.
+
+<img src="./src/main/img/imagem023.png" align="center"/>
+
+
 ---
 
 CRIADO COM :heart: POR KAI WANG!
