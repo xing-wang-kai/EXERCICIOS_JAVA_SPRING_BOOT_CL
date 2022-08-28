@@ -181,7 +181,7 @@ public class FuncionarioRelatorioService {
 		System.out.println("|--------------------------------------------|");
 		System.out.println("");
 
-		double salario = scanner.nextDouble();
+		Double salario = scanner.nextDouble();
 		if(salario==0)
 		{
 			salario = (Double) null;
