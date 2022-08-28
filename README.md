@@ -91,17 +91,26 @@ O sitema utlizado é uma interação com o terminal sem usar interfaces ou html 
 
 :white_check_mark: ADICIONAR:
 
+***Primeiro metodo do crud responsável por adicionar uma nova entidade ao banco de dados.***
+
 <img src="./src/main/img/imagem016.png" align="center"/>
 
 :white_check_mark: ALTERAR:
+
+***Usando a ID da entidade informada no banco de dados, este metodo realiza a alteração dos dados realacionados ao ID***
+***Mesmo que este metodo use recurso save ele não está salvando uma nova entidade, e sim alterando dados sobre ela***
 
 <img src="./src/main/img/imagem017.png" align="center"/>
 
 :white_check_mark: REMOVER:
 
+***Remove uma entidade do banco de dados***
+
 <img src="./src/main/img/imagem018.png" align="center"/>
 
 :white_check_mark: BUSCAR:
+
+***Retorna todas unidades no banco de dados que estão relacinadas a entidade***
 
 <img src="./src/main/img/imagem019.png" align="center"/>
 
@@ -109,6 +118,3 @@ O sitema utlizado é uma interação com o terminal sem usar interfaces ou html 
 
 CRIADO COM :heart: POR KAI WANG!
 <img src="./src/main/img/kai06.png" width="100px" heigth="100px"/>
-
-
-
