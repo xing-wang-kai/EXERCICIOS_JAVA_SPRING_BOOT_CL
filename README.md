@@ -212,5 +212,32 @@ GreateThan like Equal
 <img src="./src/main/img/imagem035.png" align="center"/>
 ---
 
+###COMO USAR O PROJETO.
+
+caso você baixe este projeto será necessário configurar as sáidas para seu banco de dados.
+busque em resource o arquivo application.properties
+
+neste arquivo configure o banco de dados neste caso com o mySql.
+
+obs: entre "<" e ">" coloque as informações passadas..
+
+```java
+spring.datasource.url=jdbc:mysql://localhost:<porta>/<nome_do_bancoDeDados>
+spring.datasource.password=<usuario_do_BancoDeDados>
+spring.datasource.username=<Password_do_bancoDeDados>
+
+spring.datasource.testWhileIdle=true
+spring.datasource.validationQuery=SELECT 1
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.show-sql=true
+spring.jpa.format-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImproveNamingStrategy
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+```
+
 CRIADO COM :heart: POR KAI WANG!
 <img src="./src/main/img/kai06.png" width="100px" heigth="100px"/>
